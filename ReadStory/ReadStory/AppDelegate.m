@@ -7,16 +7,54 @@
 //
 
 #import "AppDelegate.h"
-
+#import "CJLTableViewController.h"
+#import "CJLNavigationController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    
+    
+    NSArray * a = [[NSString stringWithFormat:@"%@",url] componentsSeparatedByString:@"Inbox/"];
+    
+    NSString * string = [a.lastObject stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+//    NSString *s = [NSString stringWithFormat:@"%@",url];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *docDir = [paths objectAtIndex:0];
+//    NSString *ss = [docDir stringByAppendingPathComponent:@"1.txt"];
+//    [s writeToFile:ss atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
+    
+    NSLog(@"%@",string);
+//    data writeToFile:<#(nonnull NSString *)#> atomically:YES];
+    
+    return YES;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
+    CJLTableViewController *ta = [[CJLTableViewController alloc]init];
+    
+    
+    CJLNavigationController *na = [[CJLNavigationController alloc]initWithRootViewController:ta];
+    
+    self.window.rootViewController = na;
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
