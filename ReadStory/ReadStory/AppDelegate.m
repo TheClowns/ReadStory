@@ -11,11 +11,17 @@
 #import "CJLNavigationController.h"
 #import "CJLViewController.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong) NSUserDefaults * user;
 @end
 
 @implementation AppDelegate
 
+- (NSUserDefaults *)user{
+    if (!_user) {
+        _user = [NSUserDefaults standardUserDefaults];
+    }
+    return _user;
+}
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 //    NSData *data = [NSData dataWithContentsOfURL:url];
     
@@ -55,6 +61,24 @@
     [self.window makeKeyAndVisible];
     
     
+    //获取屏幕亮度
+    CGFloat currentLight =   [[UIScreen mainScreen] brightness];
+    
+    [self.user setFloat:currentLight forKey:@"currentLight"];
+    
+    
+    [self.user synchronize];
+    
+    //一开始进来时  没有存该app的亮度值
+    
+
+    
+    //获取设置存的app的屏幕亮度值
+    
+    if ([self.user objectForKey:@"appLight"]) {
+        //将偏好设置里存的值  设置为当前屏幕亮度
+            [[UIScreen mainScreen]setBrightness: [self.user floatForKey:@"appLight"]];
+    }
     
     return YES;
 }
@@ -63,21 +87,18 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     
 #pragma mark -- 存入数据
-    
-    
-//    CJLNavigationController *currentVc =  (CJLNavigationController *)[self getCurrentVC];
-     CJLViewController *cjlna = (CJLViewController *)((UINavigationController *)self.window.rootViewController).visibleViewController;
-    
-    
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+     UIViewController *view = ((UINavigationController *)self.window.rootViewController).visibleViewController;
+    
+    if ([view isKindOfClass:[CJLViewController class]]) {
+        CJLViewController *cjlna = (CJLViewController *)view;
+        [user setInteger:cjlna->selectPageCount forKey:cjlna.fileName];
+        [user synchronize];
+    }
     
     
-    [user setObject:@(cjlna->selectPageCount) forKey:cjlna.fileName];
-    
-    [user synchronize];
-    
-    
-    
+    //将之前存到偏好设置里的 外界亮度 在该app离开时重新设置上
+      [[UIScreen mainScreen]setBrightness: [user floatForKey:@"currentLight"]];
     
     
     //会调用
@@ -86,41 +107,8 @@
     //失去焦点 进入到多任务
     //将当前的
     
-    
-    
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
-
-- (UIViewController *)getCurrentVC
-{
-    UIViewController *result = nil;
-    
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
-        }
-    }
-    
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-        result = nextResponder;
-    else
-        result = window.rootViewController;
-    
-    return result;
-}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     //进入后台   一定走

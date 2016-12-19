@@ -1,0 +1,21 @@
+//
+//  MyReadStory.pch
+//  ReadStory
+//
+//  Created by 这是C先生 on 2016/12/19.
+//  Copyright © 2016年 这是C先生. All rights reserved.
+//
+
+#ifndef MyReadStory_pch
+#define MyReadStory_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+#endif /* MyReadStory_pch */
+#ifdef __OBJC__
+#define KWidth [UIScreen mainScreen].bounds.size.width
+#define KHeight [UIScreen mainScreen].bounds.size.height
+#endif

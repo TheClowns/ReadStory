@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CJLBottomView;
+@protocol CJLBottomViewDelegate <NSObject>
 
+- (void) CJLBottomViewBtnClick:(UIButton *)sender;
+
+@end
 @interface CJLBottomView : UIView
-
+@property (nonatomic,assign) CGFloat appLight;
+@property (nonatomic,weak) id<CJLBottomViewDelegate> delegate;
 @end

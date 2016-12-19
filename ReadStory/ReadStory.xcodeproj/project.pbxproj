@@ -30,6 +30,7 @@
 		02628C061DF8132200FA7262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02628C0B1DF8132200FA7262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02628C0D1DF8132200FA7262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		029B2F5C1E07C42C001CE1BB /* MyReadStory.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyReadStory.pch; path = ../MyReadStory.pch; sourceTree = "<group>"; };
 		02A881A91DF83F8800912BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02A881B21DF8DE5C00912BB4 /* CJLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLNavigationController.h; sourceTree = "<group>"; };
 		02A881B31DF8DE5C00912BB4 /* CJLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLNavigationController.m; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		02628BFC1DF8132200FA7262 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				029B2F5C1E07C42C001CE1BB /* MyReadStory.pch */,
 				02628BFD1DF8132200FA7262 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -399,6 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = EKYUDB8TZH;
+				GCC_PREFIX_HEADER = /Users/zheshicxiansheng/Desktop/ReadStory/ReadStory/MyReadStory.pch;
 				INFOPLIST_FILE = ReadStory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -414,6 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = EKYUDB8TZH;
+				GCC_PREFIX_HEADER = /Users/zheshicxiansheng/Desktop/ReadStory/ReadStory/MyReadStory.pch;
 				INFOPLIST_FILE = ReadStory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
