@@ -49,17 +49,56 @@
     
     NSLog(@"用enumeratorAtPath:显示目录%@的内容：",path);
     
+    
+    
+    
+    
+    
+    
+    
+    
     while((path=[myDirectoryEnumerator nextObject])!=nil)
         
     {
         
-        [self.beforefileNameArray addObject:path];
-        //删除文件扩展名
-        NSString *fileName = [path stringByDeletingPathExtension];
-
         
-        NSLog(@"%@",[path stringByDeletingPathExtension]);
-        [self.afterfileNameArray addObject:fileName];
+        
+        
+        
+        
+        
+        
+        
+        //判断是不是文件夹
+        BOOL isDir = NO;
+        
+        
+        
+        
+        [[NSFileManager defaultManager] fileExistsAtPath:[docDir stringByAppendingPathComponent:path] isDirectory:&isDir];
+        if (isDir) {
+            NSLog(@"-----%@ 是文件夹",path);
+        }else{
+            NSLog(@"-----%@ 不是文件夹",path);
+            //过滤掉文件夹
+            NSDictionary *dic = [[NSFileManager defaultManager]attributesOfItemAtPath:path error:NULL];
+            if (![dic objectForKey:NSFileType]) {
+                //删除后缀之前 获取路径的
+                [self.beforefileNameArray addObject:path];
+                
+                //删除文件扩展名
+                NSString *fileName = [path stringByDeletingPathExtension];
+                NSArray *all = [fileName componentsSeparatedByString:@"/"];
+                
+                //删除之后 显示在tableView上的
+                [self.afterfileNameArray addObject:all.lastObject];
+
+            }
+                    }
+        
+        
+
+       
         
     }
     [self.tableView reloadData];
@@ -70,6 +109,8 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.tableFooterView = [UIView new];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

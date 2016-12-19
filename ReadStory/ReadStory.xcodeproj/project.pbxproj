@@ -16,9 +16,8 @@
 		02A881B41DF8DE5C00912BB4 /* CJLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A881B31DF8DE5C00912BB4 /* CJLNavigationController.m */; };
 		02A881B71DF8DE7F00912BB4 /* CJLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A881B61DF8DE7F00912BB4 /* CJLTableViewController.m */; };
 		02A881BA1DF9243500912BB4 /* CJLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A881B91DF9243500912BB4 /* CJLViewController.m */; };
-		02A881BD1DF9359500912BB4 /* CJLCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A881BC1DF9359500912BB4 /* CJLCollection.m */; };
-		02A881C01DF95CB000912BB4 /* CJLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A881BF1DF95CB000912BB4 /* CJLCollectionViewCell.m */; };
-		02A881C31DF95CD000912BB4 /* CJLCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A881C21DF95CD000912BB4 /* CJLCollectionViewFlowLayout.m */; };
+		02C9311E1DFE88A300A8678E /* CJLBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C9311D1DFE88A300A8678E /* CJLBottomView.m */; };
+		CDCA87B9D57376153300B27D /* libPods-ReadStory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E6F7E9585AE7B722228173 /* libPods-ReadStory.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +37,11 @@
 		02A881B61DF8DE7F00912BB4 /* CJLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLTableViewController.m; sourceTree = "<group>"; };
 		02A881B81DF9243500912BB4 /* CJLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLViewController.h; sourceTree = "<group>"; };
 		02A881B91DF9243500912BB4 /* CJLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLViewController.m; sourceTree = "<group>"; };
-		02A881BB1DF9359500912BB4 /* CJLCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLCollection.h; sourceTree = "<group>"; };
-		02A881BC1DF9359500912BB4 /* CJLCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLCollection.m; sourceTree = "<group>"; };
-		02A881BE1DF95CB000912BB4 /* CJLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLCollectionViewCell.h; sourceTree = "<group>"; };
-		02A881BF1DF95CB000912BB4 /* CJLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLCollectionViewCell.m; sourceTree = "<group>"; };
-		02A881C11DF95CD000912BB4 /* CJLCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		02A881C21DF95CD000912BB4 /* CJLCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		02C9311C1DFE88A300A8678E /* CJLBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLBottomView.h; sourceTree = "<group>"; };
+		02C9311D1DFE88A300A8678E /* CJLBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLBottomView.m; sourceTree = "<group>"; };
+		26F58AD71A37A408DBE2305A /* Pods-ReadStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadStory.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReadStory/Pods-ReadStory.release.xcconfig"; sourceTree = "<group>"; };
+		60E6F7E9585AE7B722228173 /* libPods-ReadStory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadStory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B97FFAE4C00D9B5925166534 /* Pods-ReadStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadStory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReadStory/Pods-ReadStory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCA87B9D57376153300B27D /* libPods-ReadStory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +61,8 @@
 			children = (
 				02628BFB1DF8132200FA7262 /* ReadStory */,
 				02628BFA1DF8132200FA7262 /* Products */,
+				4A3078C808A53275322791BB /* Pods */,
+				44E9C369833A59730DD63F72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +77,6 @@
 		02628BFB1DF8132200FA7262 /* ReadStory */ = {
 			isa = PBXGroup;
 			children = (
-				02A881B11DF8DE2D00912BB4 /* View */,
 				02A881B01DF8DE2500912BB4 /* Controller */,
 				02628BFF1DF8132200FA7262 /* AppDelegate.h */,
 				02628C001DF8132200FA7262 /* AppDelegate.m */,
@@ -102,6 +102,15 @@
 		02A881B01DF8DE2500912BB4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02C9311A1DFE303500A8678E /* 展示视图 */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		02C9311A1DFE303500A8678E /* 展示视图 */ = {
+			isa = PBXGroup;
+			children = (
+				02C9311B1DFE888B00A8678E /* View */,
 				02A881B21DF8DE5C00912BB4 /* CJLNavigationController.h */,
 				02A881B31DF8DE5C00912BB4 /* CJLNavigationController.m */,
 				02A881B51DF8DE7F00912BB4 /* CJLTableViewController.h */,
@@ -109,20 +118,33 @@
 				02A881B81DF9243500912BB4 /* CJLViewController.h */,
 				02A881B91DF9243500912BB4 /* CJLViewController.m */,
 			);
-			name = Controller;
+			name = "展示视图";
 			sourceTree = "<group>";
 		};
-		02A881B11DF8DE2D00912BB4 /* View */ = {
+		02C9311B1DFE888B00A8678E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				02A881BB1DF9359500912BB4 /* CJLCollection.h */,
-				02A881BC1DF9359500912BB4 /* CJLCollection.m */,
-				02A881BE1DF95CB000912BB4 /* CJLCollectionViewCell.h */,
-				02A881BF1DF95CB000912BB4 /* CJLCollectionViewCell.m */,
-				02A881C11DF95CD000912BB4 /* CJLCollectionViewFlowLayout.h */,
-				02A881C21DF95CD000912BB4 /* CJLCollectionViewFlowLayout.m */,
+				02C9311C1DFE88A300A8678E /* CJLBottomView.h */,
+				02C9311D1DFE88A300A8678E /* CJLBottomView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		44E9C369833A59730DD63F72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60E6F7E9585AE7B722228173 /* libPods-ReadStory.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A3078C808A53275322791BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B97FFAE4C00D9B5925166534 /* Pods-ReadStory.debug.xcconfig */,
+				26F58AD71A37A408DBE2305A /* Pods-ReadStory.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02628C101DF8132200FA7262 /* Build configuration list for PBXNativeTarget "ReadStory" */;
 			buildPhases = (
+				812F8EBC073DCD8C64D8ACDE /* [CP] Check Pods Manifest.lock */,
 				02628BF51DF8132200FA7262 /* Sources */,
 				02628BF61DF8132200FA7262 /* Frameworks */,
 				02628BF71DF8132200FA7262 /* Resources */,
+				BA8F8A9F87B07FE16B60307A /* [CP] Embed Pods Frameworks */,
+				E5B8F267F37E3D5E8E733B2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,18 +217,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		812F8EBC073DCD8C64D8ACDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA8F8A9F87B07FE16B60307A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadStory/Pods-ReadStory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B8F267F37E3D5E8E733B2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadStory/Pods-ReadStory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02628BF51DF8132200FA7262 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A881C31DF95CD000912BB4 /* CJLCollectionViewFlowLayout.m in Sources */,
-				02A881BD1DF9359500912BB4 /* CJLCollection.m in Sources */,
 				02A881BA1DF9243500912BB4 /* CJLViewController.m in Sources */,
-				02A881C01DF95CB000912BB4 /* CJLCollectionViewCell.m in Sources */,
 				02628C041DF8132200FA7262 /* ViewController.m in Sources */,
 				02A881B41DF8DE5C00912BB4 /* CJLNavigationController.m in Sources */,
 				02628C011DF8132200FA7262 /* AppDelegate.m in Sources */,
+				02C9311E1DFE88A300A8678E /* CJLBottomView.m in Sources */,
 				02A881B71DF8DE7F00912BB4 /* CJLTableViewController.m in Sources */,
 				02628BFE1DF8132200FA7262 /* main.m in Sources */,
 			);
@@ -323,6 +394,7 @@
 		};
 		02628C111DF8132200FA7262 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B97FFAE4C00D9B5925166534 /* Pods-ReadStory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -330,13 +402,14 @@
 				INFOPLIST_FILE = ReadStory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TheClown.FMDB-Test---01";
+				PRODUCT_BUNDLE_IDENTIFIER = TheClown.ReadStory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		02628C121DF8132200FA7262 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F58AD71A37A408DBE2305A /* Pods-ReadStory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -344,7 +417,7 @@
 				INFOPLIST_FILE = ReadStory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TheClown.FMDB-Test---01";
+				PRODUCT_BUNDLE_IDENTIFIER = TheClown.ReadStory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
